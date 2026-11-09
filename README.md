@@ -37,15 +37,14 @@ tests/
 | ID   | Name           | HP  | Size | Speed | Style        |
 |------|----------------|-----|------|-------|--------------|
 | 3028 | Goblin         | 5   | 1    | 4     | melee/crush  |
-| 661  | Goblin         | 12  | 1    | 6     | melee/crush  |
 | 26   | Zombie         | 22  | 1    | 5     | melee/slash  |
-| 130  | Skeleton       | 29  | 1    | 4     | melee/crush  |
-| 117  | Wolf           | 34  | 2    | 4     | melee/stab   |
+| 924  | Skeleton       | 18  | 1    | 4     | melee/crush  |
+| 2491 | Wolf           | 10  | 2    | 4     | melee/stab   |
 | 136  | Ogre           | 60  | 2    | 6     | melee/crush  |
-| 3049  | Hobgoblin      | 62  | 1    | 6     | melee/crush  |
+| 3049 | Hobgoblin      | 29  | 1    | 4     | melee/crush  |
 | 415  | Abyssal demon  | 150 | 1    | 4     | melee/stab   |
 
-Source: osrsbox-db (normalized offline into `data/npcs.json`).
+Source: osrsbox-db (normalized offline into `data/npcs.json`). Full list of 49 NPCs: `npx tsx src/runner/battleBuilder.ts --list`.
 
 ## Build phases (current progress)
 
