@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OldSim Results</title>
+  <style>
+    :root {
+      --bg: #0d1117; --panel: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --a: #58a6ff; --b: #f85149; --ok: #3fb950;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 32px 16px;
+      display: flex; justify-content: center;
+    }
+    .wrap { width: 100%; max-width: 720px; }
+    h1 { font-size: 28px; margin-bottom: 4px; }
+    .sub { color: var(--muted); margin-bottom: 24px; font-size: 14px; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px 24px; margin-bottom: 16px;
+    }
+    .card h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--muted); margin-bottom: 12px; }
+    .matchup { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .army { flex: 1; min-width: 180px; }
+    .army .side { font-weight: 700; font-size: 18px; margin-bottom: 6px; }
+    .army.a .side { color: var(--a); }
+    .army.b .side { color: var(--b); }
+    .army li { list-style: none; color: var(--muted); font-size: 15px; line-height: 1.6; }
+    .vs { font-weight: 700; color: var(--muted); }
+    .headline {
+      font-size: 26px; font-weight: 700; text-align: center; margin: 8px 0 16px;
+    }
+    .headline .winner-a { color: var(--a); }
+    .headline .winner-b { color: var(--b); }
+    .headline .draw { color: var(--muted); }
+    .bar {
+      display: flex; height: 28px; border-radius: 8px; overflow: hidden;
+      background: #21262d; margin-bottom: 8px;
+    }
+    .bar .seg-a { background: var(--a); }
+    .bar .seg-b { background: var(--b); }
+    .bar .seg-d { background: #6e7681; }
+    .rates {
+      display: flex; justify-content: space-between; font-size: 14px; color: var(--muted);
+    }
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px; margin-top: 8px;
+    }
+    .stat {
+      background: #0d1117; border-radius: 8px; padding: 12px 14px; border: 1px solid var(--border);
+    }
+    .stat .label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+    .stat .value { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    a.btn {
+      display: inline-block; padding: 10px 16px; border-radius: 8px;
+      background: #21262d; border: 1px solid var(--border); color: var(--text);
+      text-decoration: none; font-size: 14px;
+    }
+    a.btn:hover { background: #30363d; }
+    a.btn.primary { background: #238636; border-color: #238636; }
+    a.btn.primary:hover { background: #2ea043; }
+    #error { color: var(--b); padding: 20px; }
+    code { font-size: 13px; background: #21262d; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>OldSim Results</h1>
+    <p class="sub" id="generated">Loading…</p>
+
+    <div id="error" hidden></div>
+
+    <div class="card" id="matchupCard" hidden>
+      <h2>Matchup</h2>
+      <div class="matchup">
+        <div class="army a">
+          <div class="side">Army A</div>
+          <ul id="armyA"></ul>
+        </div>
+        <div class="vs">VS</div>
+        <div class="army b">
+          <div class="side">Army B</div>
+          <ul id="armyB"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="resultsCard" hidden>
+      <h2>Outcome</h2>
+      <div class="headline" id="headline"></div>
+      <div class="bar" id="bar"></div>
+      <div class="rates" id="rates"></div>
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <div class="card">
+      <h2>Next</h2>
+      <div class="actions">
+        <a class="btn primary" href="./">Watch replay</a>
+        <a class="btn" href="./results.json" download>Download results.json</a>
+      </div>
+      <p class="sub" style="margin-top:14px;margin-bottom:0">
+        Re-run with:<br />
+        <code>npx tsx src/runner/battleBuilder.ts --a 415:1 --b 3029:10 --runs 200</code>
+      </p>
+    </div>
+  </div>
+
+  <script type="module">
+    const err = document.getElementById("error");
+    try {
+      const res = await fetch("./results.json");
+      if (!res.ok) throw new Error("results.json not found — run the battle builder first");
+      const data = await res.json();
+
+      document.getElementById("generated").textContent =
+        `Generated ${new Date(data.generatedAt).toLocaleString()} · seed ${data.matchup.masterSeed} · ${data.matchup.runs} runs`;
+
+      const armyA = document.getElementById("armyA");
+      const armyB = document.getElementById("armyB");
+      for (const e of data.matchup.armyA) {
+        const li = document.createElement("li");
+        li.textContent = `${e.count}× ${e.name}`;
+        armyA.appendChild(li);
+      }
+      for (const e of data.matchup.armyB) {
+        const li = document.createElement("li");
+        li.textContent = `${e.count}× ${e.name}`;
+        armyB.appendChild(li);
+      }
+      document.getElementById("matchupCard").hidden = false;
+
+      const r = data.results;
+      const headline = document.getElementById("headline");
+      if (r.winsA > r.winsB) {
+        headline.innerHTML = `<span class="winner-a">Army A</span> wins ${r.winsA} of ${data.matchup.runs}`;
+      } else if (r.winsB > r.winsA) {
+        headline.innerHTML = `<span class="winner-b">Army B</span> wins ${r.winsB} of ${data.matchup.runs}`;
+      } else {
+        headline.innerHTML = `<span class="draw">Too close to call</span> (${r.winsA}–${r.winsB}${r.draws ? `, ${r.draws} draws` : ""})`;
+      }
+
+      const total = data.matchup.runs;
+      const bar = document.getElementById("bar");
+      bar.innerHTML = `
+        <div class="seg-a" style="width:${(r.winsA / total) * 100}%"></div>
+        <div class="seg-d" style="width:${(r.draws / total) * 100}%"></div>
+        <div class="seg-b" style="width:${(r.winsB / total) * 100}%"></div>
+      `;
+      document.getElementById("rates").innerHTML = `
+        <span style="color:var(--a)">A ${(r.winRateA * 100).toFixed(1)}%</span>
+        <span>draws ${r.draws}</span>
+        <span style="color:var(--b)">B ${(r.winRateB * 100).toFixed(1)}%</span>
+      `;
+
+      const stats = [
+        ["Avg survivors A", r.avgSurvivorsA.toFixed(2)],
+        ["Avg survivors B", r.avgSurvivorsB.toFixed(2)],
+        ["Avg duration", `${r.avgTicks.toFixed(0)} ticks`],
+        ["Win-rate SE", `±${(r.winRateSE * 100).toFixed(1)} pp`],
+      ];
+      const statsEl = document.getElementById("stats");
+      for (const [label, value] of stats) {
+        const d = document.createElement("div");
+        d.className = "stat";
+        d.innerHTML = `<div class="label">${label}</div><div class="value">${value}</div>`;
+        statsEl.appendChild(d);
+      }
+      document.getElementById("resultsCard").hidden = false;
+    } catch (e) {
+      err.hidden = false;
+      err.textContent = String(e.message || e);
+    }
+  </script>
+</body>
+</html>

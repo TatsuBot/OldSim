@@ -1,0 +1,28 @@
+{
+  "name": "oldsim",
+  "version": "0.1.0",
+  "description": "OSRS Army Battle Simulator \u2014 deterministic combat + pathing + Monte Carlo + Three.js replay",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "tsc",
+    "sim": "tsx src/runner/cli.ts",
+    "export-replay": "tsx src/runner/exportReplay.ts",
+    "render": "npx --yes serve public -p 5173",
+    "battle": "tsx src/runner/battleBuilder.ts",
+    "refresh-npcs": "node scripts/refreshNpcs.mjs"
+  },
+  "keywords": [
+    "osrs",
+    "runescape",
+    "battle-simulator"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,200 @@
+OldSim — Local Usage Guide
+==========================
+
+Prerequisites
+-------------
+- Node.js 18+ (20/22 recommended)
+- From the project root (folder with package.json):
+
+    npm install
+
+
+Run the test suite
+------------------
+    npm test
+
+All phases (1–10) are covered by unit/integration tests.
+
+
+List available NPCs
+-------------------
+    npx tsx src/runner/battleBuilder.ts --list
+
+
+Run a Monte Carlo matchup (battle builder)
+------------------------------------------
+Writes public/results.json and public/replay.json
+
+    npm run battle
+
+    npm run battle -- --a 415:1 --b 3028:10 --runs 200 --seed 7
+
+    npm run battle -- --a 3028:20 --b 3049:5 --runs 100 --seed 42
+
+Flags:
+  --a       Army A (default 415:1)     format: id:count[,id:count...]
+  --b       Army B (default 3028:8)
+  --runs    Number of simulated battles (default 100)
+  --seed    Master seed for reproducibility (default 1)
+  --width   Arena width in tiles (default 40)
+  --height  Arena height in tiles (default 40)
+  --cap     Max ticks before timeout (default 1200)
+  --list    List NPCs and exit
+  --help    Show help
+
+Army examples:
+  415:1              one Abyssal demon
+  3028:10            ten Goblins
+  3028:5,3049:2       five Goblins + two Hobgoblins
+
+
+Quick single-battle replay export
+---------------------------------
+    npm run export-replay
+    npx tsx src/runner/exportReplay.ts --seed 42
+
+Writes public/replay.json only (no Monte Carlo stats).
+
+
+Monte Carlo CLI (simpler default matchup)
+-----------------------------------------
+    npm run sim
+    npx tsx src/runner/cli.ts --runs 50 --seed 1
+
+
+View results + replay in the browser
+------------------------------------
+    npm run render
+
+Then open:
+  http://localhost:5173/results.html   → win rates, averages, SE
+  http://localhost:5173/               → Three.js replay player
+
+Replay controls:
+  Play / Pause
+  Speed 0.5× / 1× / 2× / 4×
+  Scrub timeline
+  Drag to orbit camera
+
+
+Typical workflow
+----------------
+1. npm install
+2. npm test                          # confirm everything works
+3. npx tsx src/runner/battleBuilder.ts --list
+4. npm run battle -- --a 415:1 --b 3028:10 --runs 200 --seed 7
+5. npm run render
+6. Open results.html, then watch the replay
+
+
+Recording a video (local)
+-------------------------
+Option A — Browser (Chrome/Edge):
+  Open the replay page, open DevTools → ⋮ → More tools → Rendering
+  (or use an extension / Windows Game Bar / macOS Cmd+Shift+5)
+
+Option B — OBS Studio (recommended):
+  1. Add a Window/Browser Capture of the replay tab
+  2. Crop to the canvas
+  3. Record at 60 fps if possible
+  4. Play the replay at 1× or 2×
+
+Option C — ffmpeg (if you capture a raw file):
+  # Example: re-encode a screen capture to a smaller mp4
+  ffmpeg -i capture.mov -c:v libx264 -crf 20 -preset medium -pix_fmt yuv420p -an oldsim-replay.mp4
+
+
+Project layout
+--------------
+  data/npcs.json          NPC stats (offline)
+  src/sim/                Pure simulation core (no graphics)
+  src/runner/             Monte Carlo, CLI, battle builder, export
+  public/index.html       Three.js replay player
+  public/results.html     Results panel
+  public/replay.json      Last exported / selected replay
+  public/results.json     Last Monte Carlo summary
+  tests/                  Vitest suite
+
+
+Design rules (do not break)
+---------------------------
+1. Simulation never draws; renderer never decides combat/pathing.
+2. Same BattleConfig + seed → identical battle, tick for tick.
+3. No Math.random() inside src/sim/ — seeded RNG only.
+4. Combat uses real OSRS formulas (integer floor at the same points).
+
+
+Available NPCs (from osrsbox-db)
+------------------------
+Refresh from upstream:
+    npm run refresh-npcs
+
+List at runtime:
+    npx tsx src/runner/battleBuilder.ts --list
+
+  ID     Name                   CB   HP  Sz  Style
+  1173   Chicken                  1    3  1  melee
+  2790   Cow                      2    8  2  melee
+  3017   Giant spider             2    5  1  melee
+  3028   Goblin                   2    5  1  melee
+  5007   Imp                      2    8  1  melee
+  2856   Giant rat                3    5  2  melee
+  513    Mugger                   6    8  1  melee
+  450    Crawling Hand            7   15  1  melee
+  1408   Dwarf                    7   10  1  melee
+  3262   Barbarian                8   14  1  melee
+  531    Dark warrior             8   17  1  melee
+  3292   Al-Kharid warrior        9   19  1  melee
+  5185   Guard                   10   16  1  melee
+  525    Thug                    10   18  1  melee
+  2491   Wolf                    11   10  2  melee
+  924    Skeleton                13   18  1  melee
+  26     Zombie                  13   22  1  melee
+  85     Ghost                   19   25  1  melee
+  2098   Hill Giant              28   35  2  melee
+  3049   Hobgoblin               28   29  1  melee
+  4959   Black Knight            32   42  1  melee
+  1798   White Knight            36   52  1  melee
+  2090   Moss giant              42   60  2  melee
+  433    Pyrefiend               43   45  1  magic
+  291    Chaos dwarf             48   61  1  melee
+  2840   Earth warrior           51   54  1  melee
+  2085   Ice giant               53   70  2  melee
+  136    Ogre                    53   60  2  melee
+  2097   Cyclops                 56   55  2  melee
+  2841   Ice warrior             57   59  1  melee
+  936    Mountain troll          69   90  1  melee
+  7259   Dagannoth               74   70  1  melee
+  2514   Ankou                   75   60  1  melee
+  484    Bloodveld               76  120  2  magic
+  437    Jelly                   78   75  1  magic
+  260    Green dragon            79   75  4  melee
+  2005   Lesser demon            82   79  2  melee
+  430    Turoth                  83   76  1  melee
+  2075   Fire giant              86  111  2  melee
+  2025   Greater demon           92   87  3  melee
+  423    Dust devil              93  105  1  ranged
+  410    Kurask                 106   97  3  melee
+  265    Blue dragon            111  105  4  melee
+  412    Gargoyle               111  105  3  melee
+  4120   Troll general          113  140  2  melee
+  8      Nechryael              115  105  1  melee
+  104    Hellhound              122  116  2  melee
+  415    Abyssal demon          124  150  1  melee
+  240    Black demon            172  157  3  melee
+
+
+Phases completed
+----------------
+  [x] 0  Scope
+  [x] 1  Skeleton + seeded RNG
+  [x] 2  NPC data pipeline
+  [x] 3  OSRS combat formulas
+  [x] 4  Tile grid / footprints / melee range
+  [x] 5  Pathing (BFS, corner rule, sizes)
+  [x] 6  Targeting + state machine
+  [x] 7  Full tick loop
+  [x] 8  Monte Carlo runner
+  [x] 9  Three.js replay renderer
+  [x] 10 Battle builder + results panel
+  [x] 11 Local capture notes + this guide

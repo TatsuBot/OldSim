@@ -1,0 +1,1430 @@
+{
+  "_meta": {
+    "source": "osrsbox-db monsters-complete.json",
+    "count": 49,
+    "note": "One representative variant per name; incomplete flag ignored when stats present"
+  },
+  "npcs": {
+    "1173": {
+      "id": "1173",
+      "name": "Chicken",
+      "combatLevel": 1,
+      "size": 1,
+      "hitpoints": 3,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": -47,
+        "strength": -42,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": -42,
+        "defenceSlash": -42,
+        "defenceCrush": -42,
+        "defenceMagic": -42,
+        "defenceRanged": -42
+      }
+    },
+    "2790": {
+      "id": "2790",
+      "name": "Cow",
+      "combatLevel": 2,
+      "size": 2,
+      "hitpoints": 8,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": -15,
+        "strength": -15,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": -21,
+        "defenceSlash": -21,
+        "defenceCrush": -21,
+        "defenceMagic": -21,
+        "defenceRanged": -21
+      }
+    },
+    "3017": {
+      "id": "3017",
+      "name": "Giant spider",
+      "combatLevel": 2,
+      "size": 1,
+      "hitpoints": 5,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": -10,
+        "strength": -10,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": -10,
+        "defenceSlash": -10,
+        "defenceCrush": -10,
+        "defenceMagic": -10,
+        "defenceRanged": -10
+      }
+    },
+    "3028": {
+      "id": "3028",
+      "name": "Goblin",
+      "combatLevel": 2,
+      "size": 1,
+      "hitpoints": 5,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": -21,
+        "strength": -15,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": -15,
+        "defenceSlash": -15,
+        "defenceCrush": -15,
+        "defenceMagic": -15,
+        "defenceRanged": -15
+      }
+    },
+    "5007": {
+      "id": "5007",
+      "name": "Imp",
+      "combatLevel": 2,
+      "size": 1,
+      "hitpoints": 8,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": -42,
+        "strength": -37,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": -42,
+        "defenceSlash": -42,
+        "defenceCrush": -42,
+        "defenceMagic": -42,
+        "defenceRanged": -42
+      }
+    },
+    "2856": {
+      "id": "2856",
+      "name": "Giant rat",
+      "combatLevel": 3,
+      "size": 2,
+      "hitpoints": 5,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 2,
+        "strength": 3,
+        "defence": 2,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "513": {
+      "id": "513",
+      "name": "Mugger",
+      "combatLevel": 6,
+      "size": 1,
+      "hitpoints": 8,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 5,
+        "strength": 5,
+        "defence": 5,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": -21,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "450": {
+      "id": "450",
+      "name": "Crawling Hand",
+      "combatLevel": 7,
+      "size": 1,
+      "hitpoints": 15,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 7,
+        "strength": 3,
+        "defence": 3,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "1408": {
+      "id": "1408",
+      "name": "Dwarf",
+      "combatLevel": 7,
+      "size": 1,
+      "hitpoints": 10,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 6,
+        "strength": 6,
+        "defence": 6,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 5,
+        "strength": 7,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 5,
+        "defenceRanged": 10
+      }
+    },
+    "3262": {
+      "id": "3262",
+      "name": "Barbarian",
+      "combatLevel": 8,
+      "size": 1,
+      "hitpoints": 14,
+      "attackSpeed": 6,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 6,
+        "strength": 5,
+        "defence": 5,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 8,
+        "strength": 10,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 1,
+        "defenceSlash": 1,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "531": {
+      "id": "531",
+      "name": "Dark warrior",
+      "combatLevel": 8,
+      "size": 1,
+      "hitpoints": 17,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 5,
+        "strength": 5,
+        "defence": 5,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 20,
+        "strength": 16,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 96,
+        "defenceSlash": 79,
+        "defenceCrush": 59,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "3292": {
+      "id": "3292",
+      "name": "Al-Kharid warrior",
+      "combatLevel": 9,
+      "size": 1,
+      "hitpoints": 19,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 7,
+        "strength": 5,
+        "defence": 4,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 10,
+        "strength": 9,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 12,
+        "defenceSlash": 15,
+        "defenceCrush": 10,
+        "defenceMagic": -1,
+        "defenceRanged": 12
+      }
+    },
+    "5185": {
+      "id": "5185",
+      "name": "Guard",
+      "combatLevel": 10,
+      "size": 1,
+      "hitpoints": 16,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 8,
+        "strength": 6,
+        "defence": 9,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 5,
+        "strength": 7,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 3,
+        "defenceSlash": 4,
+        "defenceCrush": 4,
+        "defenceMagic": 2,
+        "defenceRanged": 3
+      }
+    },
+    "525": {
+      "id": "525",
+      "name": "Thug",
+      "combatLevel": 10,
+      "size": 1,
+      "hitpoints": 18,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 7,
+        "strength": 5,
+        "defence": 9,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 5,
+        "strength": 5,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 2,
+        "defenceSlash": 3,
+        "defenceCrush": 3,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2491": {
+      "id": "2491",
+      "name": "Wolf",
+      "combatLevel": 11,
+      "size": 2,
+      "hitpoints": 10,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 10,
+        "strength": 10,
+        "defence": 10,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "924": {
+      "id": "924",
+      "name": "Skeleton",
+      "combatLevel": 13,
+      "size": 1,
+      "hitpoints": 18,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 10,
+        "strength": 11,
+        "defence": 7,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 5,
+        "defenceSlash": 5,
+        "defenceCrush": -5,
+        "defenceMagic": 0,
+        "defenceRanged": 5
+      }
+    },
+    "26": {
+      "id": "26",
+      "name": "Zombie",
+      "combatLevel": 13,
+      "size": 1,
+      "hitpoints": 22,
+      "attackSpeed": 5,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 8,
+        "strength": 9,
+        "defence": 10,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 5,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "85": {
+      "id": "85",
+      "name": "Ghost",
+      "combatLevel": 19,
+      "size": 1,
+      "hitpoints": 25,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 13,
+        "strength": 13,
+        "defence": 18,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 5,
+        "defenceSlash": 5,
+        "defenceCrush": 5,
+        "defenceMagic": -5,
+        "defenceRanged": 5
+      }
+    },
+    "2098": {
+      "id": "2098",
+      "name": "Hill Giant",
+      "combatLevel": 28,
+      "size": 2,
+      "hitpoints": 35,
+      "attackSpeed": 6,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 18,
+        "strength": 22,
+        "defence": 26,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 18,
+        "strength": 16,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "3049": {
+      "id": "3049",
+      "name": "Hobgoblin",
+      "combatLevel": 28,
+      "size": 1,
+      "hitpoints": 29,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 22,
+        "strength": 24,
+        "defence": 24,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "4959": {
+      "id": "4959",
+      "name": "Black Knight",
+      "combatLevel": 32,
+      "size": 1,
+      "hitpoints": 42,
+      "attackSpeed": 5,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "1798": {
+      "id": "1798",
+      "name": "White Knight",
+      "combatLevel": 36,
+      "size": 1,
+      "hitpoints": 52,
+      "attackSpeed": 7,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 27,
+        "strength": 29,
+        "defence": 21,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 30,
+        "strength": 31,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 83,
+        "defenceSlash": 76,
+        "defenceCrush": 70,
+        "defenceMagic": -11,
+        "defenceRanged": 74
+      }
+    },
+    "2090": {
+      "id": "2090",
+      "name": "Moss giant",
+      "combatLevel": 42,
+      "size": 2,
+      "hitpoints": 60,
+      "attackSpeed": 6,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 30,
+        "strength": 30,
+        "defence": 30,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 33,
+        "strength": 31,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "433": {
+      "id": "433",
+      "name": "Pyrefiend",
+      "combatLevel": 43,
+      "size": 1,
+      "hitpoints": 45,
+      "attackSpeed": 4,
+      "attackRange": 4,
+      "style": "magic",
+      "styleDetail": "magic",
+      "levels": {
+        "attack": 52,
+        "strength": 30,
+        "defence": 22,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 10,
+        "defenceSlash": 10,
+        "defenceCrush": 10,
+        "defenceMagic": 0,
+        "defenceRanged": 10
+      }
+    },
+    "291": {
+      "id": "291",
+      "name": "Chaos dwarf",
+      "combatLevel": 48,
+      "size": 1,
+      "hitpoints": 61,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 38,
+        "strength": 42,
+        "defence": 28,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 13,
+        "strength": 9,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 40,
+        "defenceSlash": 34,
+        "defenceCrush": 25,
+        "defenceMagic": 10,
+        "defenceRanged": 35
+      }
+    },
+    "2840": {
+      "id": "2840",
+      "name": "Earth warrior",
+      "combatLevel": 51,
+      "size": 1,
+      "hitpoints": 54,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 42,
+        "strength": 42,
+        "defence": 42,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 30,
+        "defenceSlash": 40,
+        "defenceCrush": 20,
+        "defenceMagic": 10,
+        "defenceRanged": 30
+      }
+    },
+    "2085": {
+      "id": "2085",
+      "name": "Ice giant",
+      "combatLevel": 53,
+      "size": 2,
+      "hitpoints": 70,
+      "attackSpeed": 5,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 40,
+        "strength": 40,
+        "defence": 40,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 29,
+        "strength": 31,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 3,
+        "defenceCrush": 2,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "136": {
+      "id": "136",
+      "name": "Ogre",
+      "combatLevel": 53,
+      "size": 2,
+      "hitpoints": 60,
+      "attackSpeed": 6,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 43,
+        "strength": 43,
+        "defence": 43,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 22,
+        "strength": 20,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2097": {
+      "id": "2097",
+      "name": "Cyclops",
+      "combatLevel": 56,
+      "size": 2,
+      "hitpoints": 55,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 47,
+        "strength": 50,
+        "defence": 46,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2841": {
+      "id": "2841",
+      "name": "Ice warrior",
+      "combatLevel": 57,
+      "size": 1,
+      "hitpoints": 59,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 47,
+        "strength": 47,
+        "defence": 47,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 30,
+        "defenceSlash": 40,
+        "defenceCrush": 20,
+        "defenceMagic": 10,
+        "defenceRanged": 30
+      }
+    },
+    "936": {
+      "id": "936",
+      "name": "Mountain troll",
+      "combatLevel": 69,
+      "size": 1,
+      "hitpoints": 90,
+      "attackSpeed": 6,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 40,
+        "strength": 75,
+        "defence": 40,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 20,
+        "strength": 20,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 10,
+        "defenceMagic": 200,
+        "defenceRanged": 200
+      }
+    },
+    "7259": {
+      "id": "7259",
+      "name": "Dagannoth",
+      "combatLevel": 74,
+      "size": 1,
+      "hitpoints": 70,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 68,
+        "strength": 70,
+        "defence": 50,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2514": {
+      "id": "2514",
+      "name": "Ankou",
+      "combatLevel": 75,
+      "size": 1,
+      "hitpoints": 60,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 70,
+        "strength": 70,
+        "defence": 60,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "484": {
+      "id": "484",
+      "name": "Bloodveld",
+      "combatLevel": 76,
+      "size": 2,
+      "hitpoints": 120,
+      "attackSpeed": 4,
+      "attackRange": 4,
+      "style": "magic",
+      "styleDetail": "magic",
+      "levels": {
+        "attack": 75,
+        "strength": 45,
+        "defence": 30,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "437": {
+      "id": "437",
+      "name": "Jelly",
+      "combatLevel": 78,
+      "size": 1,
+      "hitpoints": 75,
+      "attackSpeed": 4,
+      "attackRange": 4,
+      "style": "magic",
+      "styleDetail": "magic",
+      "levels": {
+        "attack": 45,
+        "strength": 45,
+        "defence": 120,
+        "magic": 45,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "260": {
+      "id": "260",
+      "name": "Green dragon",
+      "combatLevel": 79,
+      "size": 4,
+      "hitpoints": 75,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 68,
+        "strength": 68,
+        "defence": 68,
+        "magic": 68,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 20,
+        "defenceSlash": 40,
+        "defenceCrush": 40,
+        "defenceMagic": 30,
+        "defenceRanged": 20
+      }
+    },
+    "2005": {
+      "id": "2005",
+      "name": "Lesser demon",
+      "combatLevel": 82,
+      "size": 2,
+      "hitpoints": 79,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 68,
+        "strength": 70,
+        "defence": 71,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": -10,
+        "defenceRanged": 0
+      }
+    },
+    "430": {
+      "id": "430",
+      "name": "Turoth",
+      "combatLevel": 83,
+      "size": 1,
+      "hitpoints": 76,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 53,
+        "strength": 83,
+        "defence": 83,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 20,
+        "defenceCrush": 20,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2075": {
+      "id": "2075",
+      "name": "Fire giant",
+      "combatLevel": 86,
+      "size": 2,
+      "hitpoints": 111,
+      "attackSpeed": 5,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 65,
+        "strength": 65,
+        "defence": 65,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 29,
+        "strength": 31,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 3,
+        "defenceCrush": 2,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "2025": {
+      "id": "2025",
+      "name": "Greater demon",
+      "combatLevel": 92,
+      "size": 3,
+      "hitpoints": 87,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 76,
+        "strength": 78,
+        "defence": 81,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": -10,
+        "defenceRanged": 0
+      }
+    },
+    "423": {
+      "id": "423",
+      "name": "Dust devil",
+      "combatLevel": 93,
+      "size": 1,
+      "hitpoints": 105,
+      "attackSpeed": 4,
+      "attackRange": 4,
+      "style": "ranged",
+      "styleDetail": "ranged",
+      "levels": {
+        "attack": 105,
+        "strength": 70,
+        "defence": 40,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "410": {
+      "id": "410",
+      "name": "Kurask",
+      "combatLevel": 106,
+      "size": 3,
+      "hitpoints": 97,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 67,
+        "strength": 105,
+        "defence": 105,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 20,
+        "defenceCrush": 20,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "265": {
+      "id": "265",
+      "name": "Blue dragon",
+      "combatLevel": 111,
+      "size": 4,
+      "hitpoints": 105,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 95,
+        "strength": 95,
+        "defence": 95,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 50,
+        "defenceSlash": 70,
+        "defenceCrush": 70,
+        "defenceMagic": 60,
+        "defenceRanged": 50
+      }
+    },
+    "412": {
+      "id": "412",
+      "name": "Gargoyle",
+      "combatLevel": 111,
+      "size": 3,
+      "hitpoints": 105,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 75,
+        "strength": 105,
+        "defence": 107,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 20,
+        "defenceSlash": 20,
+        "defenceCrush": 0,
+        "defenceMagic": 20,
+        "defenceRanged": 20
+      }
+    },
+    "4120": {
+      "id": "4120",
+      "name": "Troll general",
+      "combatLevel": 113,
+      "size": 2,
+      "hitpoints": 140,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 70,
+        "strength": 140,
+        "defence": 40,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 60,
+        "strength": 100,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 35,
+        "defenceSlash": 60,
+        "defenceCrush": 35,
+        "defenceMagic": 200,
+        "defenceRanged": 200
+      }
+    },
+    "8": {
+      "id": "8",
+      "name": "Nechryael",
+      "combatLevel": 115,
+      "size": 1,
+      "hitpoints": 105,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "crush",
+      "levels": {
+        "attack": 97,
+        "strength": 97,
+        "defence": 105,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 20,
+        "defenceSlash": 20,
+        "defenceCrush": 20,
+        "defenceMagic": 0,
+        "defenceRanged": 20
+      }
+    },
+    "104": {
+      "id": "104",
+      "name": "Hellhound",
+      "combatLevel": 122,
+      "size": 2,
+      "hitpoints": 116,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 105,
+        "strength": 104,
+        "defence": 102,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": 0,
+        "defenceRanged": 0
+      }
+    },
+    "415": {
+      "id": "415",
+      "name": "Abyssal demon",
+      "combatLevel": 124,
+      "size": 1,
+      "hitpoints": 150,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "stab",
+      "levels": {
+        "attack": 97,
+        "strength": 67,
+        "defence": 135,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 20,
+        "defenceSlash": 20,
+        "defenceCrush": 20,
+        "defenceMagic": 0,
+        "defenceRanged": 20
+      }
+    },
+    "240": {
+      "id": "240",
+      "name": "Black demon",
+      "combatLevel": 172,
+      "size": 3,
+      "hitpoints": 157,
+      "attackSpeed": 4,
+      "attackRange": 1,
+      "style": "melee",
+      "styleDetail": "slash",
+      "levels": {
+        "attack": 145,
+        "strength": 148,
+        "defence": 152,
+        "magic": 1,
+        "ranged": 1
+      },
+      "bonuses": {
+        "attack": 0,
+        "strength": 0,
+        "magic": 0,
+        "ranged": 0,
+        "defenceStab": 0,
+        "defenceSlash": 0,
+        "defenceCrush": 0,
+        "defenceMagic": -10,
+        "defenceRanged": 0
+      }
+    }
+  }
+}
