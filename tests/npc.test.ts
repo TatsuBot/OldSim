@@ -69,7 +69,7 @@ describe("Phase 2 — NPC data pipeline", () => {
   });
 
   it("includes a size-2 NPC (Wolf)", () => {
-    const wolf = getNpc("117");
+    const wolf = getNpc("2491");
     expect(wolf.size).toBe(2);
     expect(wolf.name).toBe("Wolf");
   });
