@@ -133,55 +133,163 @@ List at runtime:
     npx tsx src/runner/battleBuilder.ts --list
 
   ID     Name                   CB   HP  Sz  Style
-  1173   Chicken                  1    3  1  melee
-  2790   Cow                      2    8  2  melee
-  3017   Giant spider             2    5  1  melee
-  3028   Goblin                   2    5  1  melee
-  5007   Imp                      2    8  1  melee
-  2856   Giant rat                3    5  2  melee
-  513    Mugger                   6    8  1  melee
-  450    Crawling Hand            7   15  1  melee
-  1408   Dwarf                    7   10  1  melee
-  3262   Barbarian                8   14  1  melee
-  531    Dark warrior             8   17  1  melee
-  3292   Al-Kharid warrior        9   19  1  melee
-  5185   Guard                   10   16  1  melee
-  525    Thug                    10   18  1  melee
-  2491   Wolf                    11   10  2  melee
-  924    Skeleton                13   18  1  melee
-  26     Zombie                  13   22  1  melee
-  85     Ghost                   19   25  1  melee
-  2098   Hill Giant              28   35  2  melee
-  3049   Hobgoblin               28   29  1  melee
-  4959   Black Knight            32   42  1  melee
-  1798   White Knight            36   52  1  melee
-  2090   Moss giant              42   60  2  melee
-  433    Pyrefiend               43   45  1  magic
-  291    Chaos dwarf             48   61  1  melee
-  2840   Earth warrior           51   54  1  melee
-  2085   Ice giant               53   70  2  melee
-  136    Ogre                    53   60  2  melee
-  2097   Cyclops                 56   55  2  melee
-  2841   Ice warrior             57   59  1  melee
-  936    Mountain troll          69   90  1  melee
-  7259   Dagannoth               74   70  1  melee
-  2514   Ankou                   75   60  1  melee
-  484    Bloodveld               76  120  2  magic
-  437    Jelly                   78   75  1  magic
-  260    Green dragon            79   75  4  melee
-  2005   Lesser demon            82   79  2  melee
-  430    Turoth                  83   76  1  melee
-  2075   Fire giant              86  111  2  melee
-  2025   Greater demon           92   87  3  melee
-  423    Dust devil              93  105  1  ranged
-  410    Kurask                 106   97  3  melee
-  265    Blue dragon            111  105  4  melee
-  412    Gargoyle               111  105  3  melee
-  4120   Troll general          113  140  2  melee
-  8      Nechryael              115  105  1  melee
-  104    Hellhound              122  116  2  melee
-  415    Abyssal demon          124  150  1  melee
-  240    Black demon            172  157  3  melee
+  1173   Chicken                1    3    1   melee
+  2492   Rat                    1    2    1   melee
+  3019   Spider                 1    2    1   melee
+  2790   Cow                    2    8    2   melee
+  3017   Giant spider           2    5    1   melee
+  3028   Goblin                 2    5    1   melee
+  5007   Imp                    2    8    1   melee
+  2856   Giant rat              3    5    2   melee
+  4246   Monk                   3    5    1   melee
+  655    Goblin                 5    12   1   melee
+  3045   Goblin                 5    12   1   melee
+  2845   Snake                  5    6    1   melee
+  513    Mugger                 6    8    1   melee
+  450    Crawling Hand          7    15   1   melee
+  1408   Dwarf                  7    10   1   melee
+  3262   Barbarian              8    14   1   melee
+  531    Dark warrior           8    17   1   melee
+  3292   Al-Kharid warrior      9    19   1   melee
+  3257   Wizard                 9    14   1   magic
+  5185   Guard                  10   16   1   melee
+  525    Thug                   10   18   1   melee
+  2491   Wolf                   11   10   2   melee
+  2485   Goblin                 13   16   1   melee
+  100    Rock Crab              13   50   1   melee
+  924    Skeleton               13   18   1   melee
+  26     Zombie                 13   22   1   melee
+  3024   Scorpion               14   17   2   melee
+  5935   Sand Crab              15   60   1   melee
+  528    Monk of Zamorak        17   10   1   magic
+  85     Ghost                  19   25   1   melee
+  7426   Zamorak crafter        19   25   1   magic
+  11072  Soldier                21   22   1   melee
+  414    Banshee                23   22   2   melee
+  6081   Gnome guard            23   31   1   melee
+  2488   Goblin                 25   26   1   melee
+  2098   Hill Giant             28   35   2   melee
+  3049   Hobgoblin              28   29   1   melee
+  955    Kalphite Worker        28   40   2   melee
+  516    Black Knight           33   42   1   melee
+  1798   White Knight           36   52   1   melee
+  3301   Archer                 37   50   1   ranged
+  419    Cockatrice             37   37   2   melee
+  289    Ghoul                  42   50   1   melee
+  2090   Moss giant             42   60   2   melee
+  1829   White Knight           42   55   1   melee
+  3446   Guardian of Armadyl    43   40   1   melee
+  433    Pyrefiend              43   45   1   melee
+  241    Baby blue dragon       48   50   2   melee
+  244    Baby red dragon        48   50   2   melee
+  291    Chaos dwarf            48   61   1   melee
+  3950   Warrior                48   50   1   melee
+  2840   Earth warrior          51   54   1   melee
+  2085   Ice giant              53   70   2   melee
+  136    Ogre                   53   60   2   melee
+  2097   Cyclops                56   55   2   melee
+  2841   Ice warrior            57   59   1   melee
+  417    Basilisk               61   75   2   melee
+  4309   Sea troll              65   80   1   melee
+  443    Infernal Mage          66   60   1   magic
+  799    Scarab mage            66   50   1   melee
+  800    Locust rider           68   90   2   melee
+  936    Mountain troll         69   90   1   melee
+  7259   Dagannoth              74   70   1   melee
+  2514   Ankou                  75   60   1   melee
+  484    Bloodveld              76   120  2   melee
+  437    Jelly                  78   75   1   melee
+  260    Green dragon           79   75   4   melee
+  1047   Cave horror            80   55   2   melee
+  7420   Zamorak ranger         81   50   1   ranged
+  142    Demon                  82   79   2   melee
+  2005   Lesser demon           82   79   2   melee
+  7423   Zamorak mage           82   50   1   magic
+  1871   Baby black dragon      83   80   2   melee
+  430    Turoth                 83   76   1   melee
+  7418   Zamorak warrior        84   45   1   melee
+  138    Kalphite Soldier       85   90   3   melee
+  2075   Fire giant             86   111  2   melee
+  2593   Werewolf               88   100  1   melee
+  5295   Elf Archer             90   105  1   ranged
+  133    Troll                  91   120  1   melee
+  2025   Greater demon          92   87   3   melee
+  423    Dust devil             93   105  1   melee
+  2      Aberrant spectre       96   90   2   magic
+  6587   Armadylean guard       97   132  2   ranged
+  1672   Ahrim the Blighted     98   100  1   magic
+  1675   Karil the Tainted      98   100  1   ranged
+  2214   Knight of Saradomin    101  108  1   melee
+  410    Kurask                 106  97   3   melee
+  5293   Elf Warrior            108  105  1   melee
+  2955   Saradomin wizard       108  120  1   melee
+  265    Blue dragon            111  105  4   melee
+  412    Gargoyle               111  105  3   melee
+  2209   Saradomin priest       113  89   1   magic
+  4120   Troll general          113  140  2   melee
+  1673   Dharok the Wretched    115  100  1   melee
+  1674   Guthan the Infested    115  100  1   melee
+  8      Nechryael              115  105  1   melee
+  2242   Spiritual ranger       115  131  1   ranged
+  3159   Spiritual warrior      115  100  1   melee
+  1676   Torag the Corrupted    115  100  1   melee
+  1677   Verac the Defiled      115  100  1   melee
+  701    Ice troll              120  100  1   melee
+  2212   Spiritual mage         120  85   1   magic
+  104    Hellhound              122  116  2   melee
+  7276   Mutated Bloodveld      123  170  2   melee
+  415    Abyssal demon          124  150  1   melee
+  6588   Bandosian guard        125  130  1   melee
+  492    Cave kraken            127  125  2   magic
+  270    Bronze dragon          131  122  4   melee
+  2207   Growler                139  146  3   magic
+  5633   Shade                  140  115  1   melee
+  465    Skeletal Wyvern        140  200  3   melee
+  959    Kalphite Guardian      141  170  4   melee
+  2216   Sergeant Strongstack   141  128  1   melee
+  2218   Sergeant Grimspike     142  146  1   ranged
+  2217   Sergeant Steelwill     142  127  1   magic
+  3163   Wingman Skree          143  121  2   magic
+  2208   Bree                   146  162  2   ranged
+  2206   Starlight              149  160  2   magic
+  6766   Lizardman shaman       150  150  3   magic
+  3132   Balfrug Kreeyath       151  161  3   magic
+  247    Red dragon             152  140  4   melee
+  498    Smoke devil            160  185  1   ranged
+  240    Black demon            172  157  3   melee
+  4005   Dark beast             182  220  3   magic
+  272    Iron dragon            189  165  4   melee
+  7795   Ancient Wyvern         210  300  5   melee
+  6615   Scorpia                225  200  5   melee
+  252    Black dragon           227  190  4   melee
+  2918   Brutal green dragon    227  175  4   melee
+  5779   Giant Mole             230  200  3   melee
+  139    Steel dragon           246  210  3   melee
+  7144   Demonic gorilla        275  380  2   melee
+  239    King Black Dragon      276  240  5   melee
+  494    Kraken                 291  255  4   melee
+  499    Thermonuclear smoke devil 301  240  4   ranged
+  2266   Dagannoth Prime        303  255  3   melee
+  2267   Dagannoth Rex          303  255  3   melee
+  2265   Dagannoth Supreme      303  255  3   melee
+  2919   Mithril dragon         304  254  4   melee
+  2054   Chaos Elemental        305  250  3   melee
+  7275   Brutal black dragon    318  315  4   melee
+  5862   Cerberus               318  600  5   melee
+  963    Kalphite Queen         333  255  5   melee
+  8030   Adamant dragon         338  295  5   melee
+  5886   Abyssal Sire           350  400  6   magic
+  8027   Rune dragon            380  330  4   melee
+  8060   Vorkath                392  460  7   melee
+  6611   Vet'ion                454  255  3   melee
+  6504   Venenatis              464  255  4   melee
+  6503   Callisto               470  255  5   melee
+  3162   Kree'arra              580  255  5   ranged
+  2205   Commander Zilyana      596  255  2   magic
+  2215   General Graardor       624  255  4   ranged
+  3129   K'ril Tsutsaroth       650  255  5   melee
+  3127   TzTok-Jad              702  250  5   ranged
+  2043   Zulrah                 725  500  5   ranged
 
 
 Phases completed

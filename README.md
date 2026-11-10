@@ -44,7 +44,7 @@ tests/
 | 3049 | Hobgoblin      | 29  | 1    | 4     | melee/crush  |
 | 415  | Abyssal demon  | 150 | 1    | 4     | melee/stab   |
 
-Source: osrsbox-db (normalized offline into `data/npcs.json`). Full list of 49 NPCs: `npx tsx src/runner/battleBuilder.ts --list`.
+Source: osrsbox-db (normalized offline into `data/npcs.json`). Full list of 157 NPCs: `npx tsx src/runner/battleBuilder.ts --list`.
 
 ## Build phases (current progress)
 
